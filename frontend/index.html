@@ -2,36 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Student Quiz Generator</title>
+  <title>QuizAI - AI-Powered Quiz Generator</title>
   <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
-  <h1>AI Quiz Generator</h1>
-<textarea id="textInput" placeholder="Paste your notes here..."></textarea>
-<div id="quizContainer"></div>
-<div class="language-select">
-  <label for="langSelect">🌐 Choose Language:</label>
-  <select id="langSelect">
-    <option value="en-IN">English</option>
-    <option value="hi-IN">Hindi (हिन्दी)</option>
-    <option value="te-IN">Telugu (తెలుగు)</option>
-    <option value="kn-IN">Kannada (ಕನ್ನಡ)</option>
-    <option value="ml-IN">Malayalam (മലയാളം)</option>
-    <option value="ta-IN">Tamil (தமிழ்)</option>
-    <option value="bn-IN">Bengali (বাংলা)</option>
-    <option value="gu-IN">Gujarati (ગુજરાતી)</option>
-    <option value="as-IN">Assamese (অসমীয়া)</option>
-    <option value="mr-IN">Marathi (मराठी)</option>
-  </select>
-</div>
+  <div class="container">
+    <header>
+      <h1 class="logo">QuizAI</h1>
+      <p class="tagline">Generate AI-Powered Quizzes Instantly</p>
+    </header>
 
-<button id="micBtn" title="Click to start speaking 🎤">🎙️ Speak</button>
-<span id="micStatus"></span>
-<canvas id="analyticsChart" height="200"></canvas>
-<canvas id="timeChart" height="200"></canvas>
-<button id="generateBtn">Generate Quiz</button>
+    <div class="main-card">
+      <div class="input-section">
+        <label for="textInput" class="input-label">Enter your notes or topic</label>
+        <textarea id="textInput" class="topic-input" placeholder="Paste study material..."></textarea>
 
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+        <div class="file-upload-section">
+          <input type="file" id="fileInput" class="file-input" accept=".txt,.pdf,.docx" />
+          <label for="fileInput" class="file-label">📄 Upload Study File</label>
+        </div>
+
+        <select id="langSelect" class="lang-select">
+          <option value="en-US">English</option>
+          <option value="hi-IN">Hindi</option>
+          <option value="te-IN">Telugu</option>
+          <option value="kn-IN">Kannada</option>
+          <option value="ml-IN">Malayalam</option>
+          <option value="ta-IN">Tamil</option>
+          <option value="bn-IN">Bengali</option>
+          <option value="gu-IN">Gujarati</option>
+          <option value="as-IN">Assamese</option>
+          <option value="mr-IN">Marathi</option>
+        </select>
+
+        <div class="mic-controls">
+          <button id="micBtn" title="Speak your topic">🎙️ Speak</button>
+          <span id="micStatus"></span>
+        </div>
+
+        <button id="generateBtn" class="generate-btn">Generate Quiz</button>
+      </div>
+
+      <div id="quizContainer" class="quiz-section"></div>
+
+      <canvas id="analyticsChart" height="200"></canvas>
+      <canvas id="timeChart" height="200"></canvas>
+
+      <div class="actions">
+        <button id="downloadBtn" class="download-btn hidden">⬇️ Download Results</button>
+        <button id="level2Btn" class="level2-btn hidden">🔥 Level 2 (Hard)</button>
+      </div>
+    </div>
+
+    <footer>
+      <p>Built with Node.js + Express | Hosted on Vercel</p>
+    </footer>
+  </div>
+
   <script src="script.js"></script>
 </body>
 </html>
