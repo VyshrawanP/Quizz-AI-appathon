@@ -237,6 +237,30 @@ footer {
     transform: translateY(0);
   }
 }
+.correctBtn {
+  background: #dcfce7 !important;
+  border-color: #22c55e !important;
+  color: #166534 !important;
+}
+.wrongBtn {
+  background: #fee2e2 !important;
+  border-color: #ef4444 !important;
+  color: #7f1d1d !important;
+}
+.analyticsBtn, .downloadBtn {
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  transition: 0.3s;
+}
+.analyticsBtn:hover, .downloadBtn:hover {
+  transform: scale(1.05);
+}
 
 
 @keyframes gradientMove {
