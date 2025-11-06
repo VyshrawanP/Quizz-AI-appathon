@@ -1,0 +1,68 @@
+body {
+  font-family: Arial, sans-serif;
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 10px;
+  text-align: center;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+#quizContainer {
+  margin-top: 20px;
+  text-align: left;
+}
+
+.downloadBtn {
+  margin-top: 1rem;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;.level2Btn {
+  margin-top: 1rem;
+  background-color: #f97316;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.level2Btn:hover {
+  background-color: #ea580c;
+}
+
+  cursor: pointer;
+}
+.downloadBtn:hover {
+  background-color: #1e40af;
+}
+
+.language-select {
+  margin: 1rem 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+#langSelect {
+  padding: 0.4rem;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}

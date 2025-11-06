@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Quiz Generator</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>AI Quiz Generator</h1>
+<textarea id="textInput" placeholder="Paste your notes here..."></textarea>
+<div id="quizContainer"></div>
+<div class="language-select">
+  <label for="langSelect">🌐 Choose Language:</label>
+  <select id="langSelect">
+    <option value="en-IN">English</option>
+    <option value="hi-IN">Hindi (हिन्दी)</option>
+    <option value="te-IN">Telugu (తెలుగు)</option>
+    <option value="kn-IN">Kannada (ಕನ್ನಡ)</option>
+    <option value="ml-IN">Malayalam (മലയാളം)</option>
+    <option value="ta-IN">Tamil (தமிழ்)</option>
+    <option value="bn-IN">Bengali (বাংলা)</option>
+    <option value="gu-IN">Gujarati (ગુજરાતી)</option>
+    <option value="as-IN">Assamese (অসমীয়া)</option>
+    <option value="mr-IN">Marathi (मराठी)</option>
+  </select>
+</div>
+
+<button id="micBtn" title="Click to start speaking 🎤">🎙️ Speak</button>
+<span id="micStatus"></span>
+<canvas id="analyticsChart" height="200"></canvas>
+<canvas id="timeChart" height="200"></canvas>
+<button id="generateBtn">Generate Quiz</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
